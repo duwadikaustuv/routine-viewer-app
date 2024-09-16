@@ -66,7 +66,7 @@ const Navbar = () => {
         ref={navRef}
         className={
           nav
-            ? "fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#41448B] ease-in-out duration-500"
+            ? "fixed md:hidden left-0 top-0 w-[60%] h-full border-r rounded-r-2xl border-r-[#4f5195] bg-[#41448B] ease-in-out duration-500"
             : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]"
         }
       >
