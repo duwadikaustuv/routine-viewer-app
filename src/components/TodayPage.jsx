@@ -114,16 +114,15 @@ const routineData = [
 ];
 
 const TodayPage = () => {
+  const getCurrentDay = () => {
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+    const todayIndex = new Date().getDay();
+    return days[todayIndex];
+  };
+
   const [showDayDropdown, setShowDayDropdown] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [selectedDay, setSelectedDay] = useState(() => {
-    const getCurrentDay = () => {
-      const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
-      const todayIndex = new Date().getDay();
-      return days[todayIndex];
-    };
-    return getCurrentDay();
-  });
+  const [selectedDay, setSelectedDay] = useState(getCurrentDay());
   const [displayOptions, setDisplayOptions] = useState({
     time: true,
     block: true,
@@ -137,7 +136,7 @@ const TodayPage = () => {
   const popupRef = useRef(null);
 
   const handleChooseClick = () => {
-    setShowPopup(!showPopup);
+    setShowPopup((prev) => !prev);
   };
 
   const handleDayButtonClick = () => {
@@ -161,7 +160,8 @@ const TodayPage = () => {
       if (
         showPopup &&
         popupRef.current &&
-        !popupRef.current.contains(event.target)
+        !popupRef.current.contains(event.target) &&
+        !event.target.closest(".choose-btn")
       ) {
         setShowPopup(false);
       }
