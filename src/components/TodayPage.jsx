@@ -116,7 +116,14 @@ const routineData = [
 const TodayPage = () => {
   const [showDayDropdown, setShowDayDropdown] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [selectedDay, setSelectedDay] = useState("Sun");
+  const [selectedDay, setSelectedDay] = useState(() => {
+    const getCurrentDay = () => {
+      const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+      const todayIndex = new Date().getDay();
+      return days[todayIndex];
+    };
+    return getCurrentDay();
+  });
   const [displayOptions, setDisplayOptions] = useState({
     time: true,
     block: true,
