@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { AiFillCaretDown } from "react-icons/ai";
 import { FaChevronDown } from "react-icons/fa";
 
-// Routine data
 const routineData = [
   {
     year: "Year 2",
@@ -73,8 +72,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Sugat Man Shakya",
-    block: "Skill Lab",
-    room: "04 - Prajwol Adhikari",
+    block: "Skill",
+    room: "Lab 04 - Prajwol Adhikari",
   },
   {
     year: "Year 2",
@@ -133,8 +132,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Dipeshor Silwal",
-    block: "Skill Lab",
-    room: "04 - Prajwol Adhikari",
+    block: "Skill",
+    room: "Lab 04 - Prajwol Adhikari",
   },
   {
     year: "Year 2",
@@ -157,8 +156,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Rupsan Shrestha",
-    block: "Skill Lab",
-    room: "10 - Pranjal Deep Kanel",
+    block: "Skill",
+    room: "Lab 10 - Pranjal Deep Kanel",
   },
   {
     year: "Year 2",
@@ -169,8 +168,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Bishnu Pandey",
-    block: "Skill Lab",
-    room: "11 - Dorjee Khando Lama",
+    block: "Skill",
+    room: "Lab 11 - Dorjee Khando Lama",
   },
   {
     year: "Year 2",
@@ -193,8 +192,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Jaganath Paudyal",
-    block: "Skill Lab",
-    room: "08 - Vijay Pathak",
+    block: "Skill",
+    room: "Lab 08 - Vijay Pathak",
   },
   {
     year: "Year 2",
@@ -217,8 +216,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Sugat Man Shakya",
-    block: "Skill Lab",
-    room: "07 - Rupesh Dangol",
+    block: "Skill",
+    room: "Lab 07 - Rupesh Dangol",
   },
   {
     year: "Year 2",
@@ -229,8 +228,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Dipeshor Silwal",
-    block: "Skill Lab",
-    room: "04 - Prajwol Adhikari",
+    block: "Skill",
+    room: "Lab 04 - Prajwol Adhikari",
   },
   {
     year: "Year 2",
@@ -241,8 +240,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Rupsan Shrestha",
-    block: "Skill Lab",
-    room: "10 - Pranjal Deep Kanel",
+    block: "Skill",
+    room: "Lab 10 - Pranjal Deep Kanel",
   },
   {
     year: "Year 2",
@@ -253,8 +252,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Bishnu Pandey",
-    block: "Skill Lab",
-    room: "11 - Dorjee Khando Lama",
+    block: "Skill",
+    room: "Lab 11 - Dorjee Khando Lama",
   },
   {
     year: "Year 2",
@@ -277,8 +276,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Jaganath Paudyal",
-    block: "Skill Lab",
-    room: "08 - Vijay Pathak",
+    block: "Skill",
+    room: "Lab 08 - Vijay Pathak",
   },
   {
     year: "Year 2",
@@ -337,8 +336,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Bishnu Pandey",
-    block: "Skill Lab",
-    room: "11 - Dorjee Khando Lama",
+    block: "Skill",
+    room: "Lab 11 - Dorjee Khando Lama",
   },
   {
     year: "Year 2",
@@ -361,8 +360,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Jaganath Paudyal",
-    block: "Skill Lab",
-    room: "08 - Vijay Pathak",
+    block: "Skill",
+    room: "Lab 08 - Vijay Pathak",
   },
   {
     year: "Year 2",
@@ -373,8 +372,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Ayush Bhakta Pradhanang",
-    block: "Skill Lab",
-    room: "12 - Jagaran Maharjan",
+    block: "Skill",
+    room: "Lab 12 - Jagaran Maharjan",
   },
   {
     year: "Year 2",
@@ -433,8 +432,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Rupsan Shrestha",
-    block: "Skill Lab",
-    room: "01 - Sarun Dahal",
+    block: "Skill",
+    room: "Lab 01 - Sarun Dahal",
   },
   {
     year: "Year 2",
@@ -445,8 +444,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Ayush Bhakta Pradhanang",
-    block: "Skill Lab",
-    room: "04 - Prajwol Adhikari",
+    block: "Skill",
+    room: "Lab 04 - Prajwol Adhikari",
   },
   {
     year: "Year 2",
@@ -481,8 +480,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Jaganath Paudyal",
-    block: "Skill Lab",
-    room: "02 - Sangay Lama",
+    block: "Skill",
+    room: "Lab 02 - Sangay Lama",
   },
   {
     year: "Year 2",
@@ -517,8 +516,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Dipeshor Silwal",
-    block: "Skill Lab",
-    room: "03 - Srijan Ghimire",
+    block: "Skill",
+    room: "Lab 03 - Srijan Ghimire",
   },
   {
     year: "Year 2",
@@ -553,8 +552,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Bishnu Pandey",
-    block: "Skill Lab",
-    room: "11 - Dorjee Khando Lama",
+    block: "Skill",
+    room: "Lab 11 - Dorjee Khando Lama",
   },
   {
     year: "Year 2",
@@ -577,8 +576,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Sugat Man Shakya",
-    block: "Skill Lab",
-    room: "02 - Sangay Lama",
+    block: "Skill",
+    room: "Lab 02 - Sangay Lama",
   },
   {
     year: "Year 2",
@@ -589,8 +588,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Jaganath Paudyal",
-    block: "Skill Lab",
-    room: "04 - Prajwol Adhikari",
+    block: "Skill",
+    room: "Lab 04 - Prajwol Adhikari",
   },
   {
     year: "Year 2",
@@ -637,8 +636,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Dipeshor Silwal",
-    block: "Skill Lab",
-    room: "03 - Srijan Ghimire",
+    block: "Skill",
+    room: "Lab 03 - Srijan Ghimire",
   },
   {
     year: "Year 2",
@@ -649,8 +648,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Bishnu Pandey",
-    block: "Skill Lab",
-    room: "11 - Dorjee Khando Lama",
+    block: "Skill",
+    room: "Lab 11 - Dorjee Khando Lama",
   },
   {
     year: "Year 2",
@@ -661,8 +660,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Sugat Man Shakya",
-    block: "Skill Lab",
-    room: "02 - Sangay Lama",
+    block: "Skill",
+    room: "Lab 02 - Sangay Lama",
   },
   {
     year: "Year 2",
@@ -673,8 +672,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Jaganath Paudyal",
-    block: "Skill Lab",
-    room: "06 - Anew Karki",
+    block: "Skill",
+    room: "Lab 06 - Anew Karki",
   },
   {
     year: "Year 2",
@@ -1373,7 +1372,6 @@ const routineData = [
     room: "SR08 - Sajiya Gurung",
   },
 
-  // Lectures
   {
     year: "Year 2",
     faculty: "Computing",
@@ -2007,8 +2005,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Ayush Bhakta Pradhanang",
-    block: "Skill Lab",
-    room: "01 - Sarun Dahal",
+    block: "Skill",
+    room: "Lab 01 - Sarun Dahal",
   },
   {
     year: "Year 2",
@@ -2019,8 +2017,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Jaganath Paudyal",
-    block: "Skill Lab",
-    room: "04 - Prajwol Adhikari",
+    block: "Skill",
+    room: "Lab 04 - Prajwol Adhikari",
   },
   {
     year: "Year 2",
@@ -2187,8 +2185,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Bishnu Pandey",
-    block: "Skill Lab",
-    room: "01 - Sarun Dahal",
+    block: "Skill",
+    room: "Lab 01 - Sarun Dahal",
   },
   {
     year: "Year 2",
@@ -2199,8 +2197,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Rupsan Shrestha",
-    block: "Skill Lab",
-    room: "04 - Prajwol Adhikari",
+    block: "Skill",
+    room: "Lab 04 - Prajwol Adhikari",
   },
   {
     year: "Year 2",
@@ -2211,8 +2209,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Ayush Bhakta Pradhanang",
-    block: "Skill Lab",
-    room: "08 - Vijay Pathak",
+    block: "Skill",
+    room: "Lab 08 - Vijay Pathak",
   },
   {
     year: "Year 2",
@@ -2283,8 +2281,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Rupsan Shrestha",
-    block: "Skill Lab",
-    room: "04 - Prajwol Adhikari",
+    block: "Skill",
+    room: "Lab 04 - Prajwol Adhikari",
   },
   {
     year: "Year 2",
@@ -2331,8 +2329,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Bishnu Pandey",
-    block: "Skill Lab",
-    room: "01 - Sarun Dahal",
+    block: "Skill",
+    room: "Lab 01 - Sarun Dahal",
   },
   {
     year: "Year 2",
@@ -2475,8 +2473,8 @@ const routineData = [
     type: "Lab",
     module: "Network Operating Systems",
     lecturer: "Mr. Bishnu Pandey",
-    block: "Skill Lab",
-    room: "01 - Sarun Dahal",
+    block: "Skill",
+    room: "Lab 01 - Sarun Dahal",
   },
   {
     year: "Year 2",
@@ -2547,8 +2545,8 @@ const routineData = [
     type: "Lab",
     module: "Cloud Computing and the Internet of Things",
     lecturer: "Mr. Jaganath Paudyal",
-    block: "Skill Lab",
-    room: "01 - Sarun Dahal",
+    block: "Skill",
+    room: "Lab 01 - Sarun Dahal",
   },
   {
     year: "Year 2",
