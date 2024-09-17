@@ -2734,7 +2734,7 @@ const TodayPage = () => {
         <select
           value={selectedYear}
           onChange={(e) => setSelectedYear(e.target.value)}
-          className="p-2 bg-[#41448B] text-white hover:bg-[#5a5f99] border border-gray-300 rounded-md"
+          className="p-2 bg-[#41448B] text-sm text-white hover:bg-[#5a5f99] border border-gray-300 rounded-md"
         >
           <option className="bg-white text-[#41448B]" value="Year 1">
             Year 1
@@ -2751,7 +2751,7 @@ const TodayPage = () => {
         <select
           value={selectedFaculty}
           onChange={(e) => setSelectedFaculty(e.target.value)}
-          className="p-2 bg-[#41448B] text-white hover:bg-[#5a5f99] border border-gray-300 rounded-md"
+          className="p-2 text-sm bg-[#41448B] text-white hover:bg-[#5a5f99] border border-gray-300 rounded-md"
         >
           <option className="bg-white text-[#41448B]" value="Computing">
             Computing
@@ -2771,7 +2771,7 @@ const TodayPage = () => {
         <select
           value={selectedSection}
           onChange={(e) => setSelectedSection(e.target.value)}
-          className="p-2 bg-[#41448B] text-white hover:bg-[#5a5f99] border border-gray-300 rounded-md"
+          className="p-2 text-sm bg-[#41448B] text-white hover:bg-[#5a5f99] border border-gray-300 rounded-md"
         >
           {getSections(selectedYear, selectedFaculty).map((section) => (
             <option
@@ -2789,9 +2789,9 @@ const TodayPage = () => {
       <div className="relative mb-8" ref={dayDropdownRef}>
         <button
           onClick={handleDayButtonClick}
-          className="flex items-center p-2 bg-[#41448B] hover:bg-[#5a5f99] hover:text-white text-white rounded-md transition duration-300 day-btn"
+          className="flex text-sm items-center p-2 bg-[#41448B] hover:bg-[#5a5f99] hover:text-white text-white rounded-md transition duration-300 day-btn"
         >
-          <span className="mr-2">Select Day</span>
+          <span className="mr-2">{selectedDay}</span>
           <FaChevronDown />
         </button>
         {showDayDropdown && (
@@ -2815,7 +2815,7 @@ const TodayPage = () => {
       <div className="relative mb-8">
         <button
           onClick={handleChooseClick}
-          className="flex items-center p-2 bg-[#41448B] hover:bg-[#5a5f99] hover:text-white text-white rounded-md transition duration-300 choose-btn"
+          className="flex items-center text-sm p-2 bg-[#41448B] hover:bg-[#5a5f99] hover:text-white text-white rounded-md transition duration-300 choose-btn"
         >
           Choose Options <AiFillCaretDown className="ml-2" />
         </button>
@@ -2893,27 +2893,27 @@ const TodayPage = () => {
       </div>
 
       {/* Routine Table */}
-      <div className="w-full flex justify-center">
-        <table className="table-auto text-left border-collapse border border-gray-300 w-3/4">
+      <div className="w-full max-w-4xl overflow-x-auto">
+        <table className="min-w-full bg-white border border-gray-200">
           <thead>
             <tr className="bg-[#41448B] text-white">
               {displayOptions.time && (
-                <th className="border border-gray-300 px-4 py-2">Time</th>
+                <th className="py-2 px-4 border-b">Time</th>
               )}
               {displayOptions.block && (
-                <th className="border border-gray-300 px-4 py-2">Block</th>
+                <th className="py-2 px-4 border-b">Block</th>
               )}
               {displayOptions.room && (
-                <th className="border border-gray-300 px-4 py-2">Room</th>
+                <th className="py-2 px-4 border-b">Room</th>
               )}
               {displayOptions.classType && (
-                <th className="border border-gray-300 px-4 py-2">Type</th>
+                <th className="py-2 px-4 border-b">Type</th>
               )}
               {displayOptions.moduleTitle && (
-                <th className="border border-gray-300 px-4 py-2">Module</th>
+                <th className="py-2 px-4 border-b">Module</th>
               )}
               {displayOptions.lecturer && (
-                <th className="border border-gray-300 px-4 py-2">Lecturer</th>
+                <th className="py-2 px-4 border-b">Lecturer</th>
               )}
             </tr>
           </thead>
@@ -2929,34 +2929,22 @@ const TodayPage = () => {
               .map((entry, index) => (
                 <tr key={index}>
                   {displayOptions.time && (
-                    <td className="border border-gray-300 px-4 py-2">
-                      {entry.time}
-                    </td>
+                    <td className="py-2 px-4 border-b">{entry.time}</td>
                   )}
                   {displayOptions.block && (
-                    <td className="border border-gray-300 px-4 py-2">
-                      {entry.block}
-                    </td>
+                    <td className="py-2 px-4 border-b">{entry.block}</td>
                   )}
                   {displayOptions.room && (
-                    <td className="border border-gray-300 px-4 py-2">
-                      {entry.room}
-                    </td>
+                    <td className="py-2 px-4 border-b">{entry.room}</td>
                   )}
                   {displayOptions.classType && (
-                    <td className="border border-gray-300 px-4 py-2">
-                      {entry.type}
-                    </td>
+                    <td className="py-2 px-4 border-b">{entry.type}</td>
                   )}
                   {displayOptions.moduleTitle && (
-                    <td className="border border-gray-300 px-4 py-2">
-                      {entry.module}
-                    </td>
+                    <td className="py-2 px-4 border-b">{entry.module}</td>
                   )}
                   {displayOptions.lecturer && (
-                    <td className="border border-gray-300 px-4 py-2">
-                      {entry.lecturer}
-                    </td>
+                    <td className="py-2 px-4 border-b">{entry.lecturer}</td>
                   )}
                 </tr>
               ))}
