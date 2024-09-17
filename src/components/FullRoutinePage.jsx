@@ -152,7 +152,7 @@ const FullRoutinePage = () => {
 
   return (
     <div className="bg-white text-[#41448B] pt-28 min-h-screen flex flex-col items-center">
-      <h1 className="text-2xl font-bold text-center mb-4">Today's Routine</h1>
+      <h1 className="text-2xl font-bold text-center mb-4">Full Routine</h1>
 
       {/* Choose Button */}
       <div className="relative mb-8">
