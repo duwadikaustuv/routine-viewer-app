@@ -5554,13 +5554,14 @@ const routineData = [
 const getSections = (year, faculty) => {
   const sections = {
     "Year 1": {
-      Computing: ["C11", "C12", "C13"],
-      Networking: ["N11", "N12"],
-      AI: ["AI11", "AI12"],
-      Multimedia: ["M11", "M12", "M13"],
+      Computing: ["-", "C11", "C12", "C13"],
+      Networking: ["-", "N11", "N12"],
+      AI: ["-", "AI11", "AI12"],
+      Multimedia: ["-", "M11", "M12", "M13"],
     },
     "Year 2": {
       Computing: [
+        "-",
         "C1",
         "C2",
         "C3",
@@ -5581,6 +5582,7 @@ const getSections = (year, faculty) => {
         "C18",
       ],
       Networking: [
+        "-",
         "N1",
         "N2",
         "N3",
@@ -5593,14 +5595,14 @@ const getSections = (year, faculty) => {
         "N10",
         "N11",
       ],
-      AI: ["AI1", "AI2", "AI3", "AI4", "AI5", "AI6"],
-      Multimedia: ["M1", "M2", "M3", "M4", "M5", "M6"],
+      AI: ["-", "AI1", "AI2", "AI3", "AI4", "AI5", "AI6"],
+      Multimedia: ["-", "M1", "M2", "M3", "M4", "M5", "M6"],
     },
     "Year 3": {
-      Computing: ["C31", "C32", "C33"],
-      Networking: ["N31", "N32"],
-      AI: ["AI31", "AI32"],
-      Multimedia: ["M31", "M32", "M33"],
+      Computing: ["-", "C31", "C32", "C33"],
+      Networking: ["-", "N31", "N32"],
+      AI: ["-", "AI31", "AI32"],
+      Multimedia: ["-", "M31", "M32", "M33"],
     },
   };
 
