@@ -5958,7 +5958,7 @@ const TodayPage = () => {
         <select
           value={selectedYear}
           onChange={(e) => setSelectedYear(e.target.value)}
-          className="p-2 bg-[#41448B] text-sm text-white hover:bg-[#5a5f99] border border-gray-300 rounded-md"
+          className="p-2 bg-[#41448B] text-sm text-white hover:bg-[#5a5f99] cursor-pointer border border-gray-300 rounded-md"
         >
           <option className="bg-white text-[#41448B]" value="Year 1">
             Year 1
@@ -5975,7 +5975,7 @@ const TodayPage = () => {
         <select
           value={selectedFaculty}
           onChange={(e) => setSelectedFaculty(e.target.value)}
-          className="p-2 text-sm bg-[#41448B] text-white hover:bg-[#5a5f99] border border-gray-300 rounded-md"
+          className="p-2 text-sm bg-[#41448B] text-white hover:bg-[#5a5f99] cursor-pointer border border-gray-300 rounded-md"
         >
           <option className="bg-white text-[#41448B]" value="Computing">
             Computing
@@ -5995,7 +5995,7 @@ const TodayPage = () => {
         <select
           value={selectedSection}
           onChange={(e) => setSelectedSection(e.target.value)}
-          className="p-2 text-sm bg-[#41448B] text-white hover:bg-[#5a5f99] border border-gray-300 rounded-md"
+          className="p-2 text-sm bg-[#41448B] text-white hover:bg-[#5a5f99] cursor-pointer border border-gray-300 rounded-md"
         >
           {getSections(selectedYear, selectedFaculty).map((section) => (
             <option

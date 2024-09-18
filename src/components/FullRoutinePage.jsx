@@ -5938,7 +5938,7 @@ const FullRoutinePage = () => {
         <select
           value={selectedYear}
           onChange={(e) => setSelectedYear(e.target.value)}
-          className="p-2 bg-[#41448B] text-white border border-gray-300 rounded-md text-sm md:text-sm" // Match text size with checkbox
+          className="p-2 bg-[#41448B] text-white border hover:bg-[#5a5f99] cursor-pointer border-gray-300 rounded-md text-sm md:text-sm" // Match text size with checkbox
         >
           <option className="bg-white text-[#41448B]" value="Year 1">
             Year 1
@@ -5955,7 +5955,7 @@ const FullRoutinePage = () => {
         <select
           value={selectedFaculty}
           onChange={(e) => setSelectedFaculty(e.target.value)}
-          className="p-2 bg-[#41448B] text-white border border-gray-300 rounded-md text-sm md:text-sm" // Match text size with checkbox
+          className="p-2 bg-[#41448B] text-white border hover:bg-[#5a5f99] cursor-pointer border-gray-300 rounded-md text-sm md:text-sm" // Match text size with checkbox
         >
           <option className="bg-white text-[#41448B]" value="Computing">
             Computing
@@ -5975,7 +5975,7 @@ const FullRoutinePage = () => {
         <select
           value={selectedSection}
           onChange={(e) => setSelectedSection(e.target.value)}
-          className="p-2 bg-[#41448B] text-white border border-gray-300 rounded-md text-sm md:text-sm" // Match text size with checkbox
+          className="p-2 bg-[#41448B] text-white border hover:bg-[#5a5f99] cursor-pointer border-gray-300 rounded-md text-sm md:text-sm" // Match text size with checkbox
         >
           {getSections(selectedYear, selectedFaculty).map((section) => (
             <option
