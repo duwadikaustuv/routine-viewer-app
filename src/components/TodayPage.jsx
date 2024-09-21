@@ -6000,6 +6000,15 @@ const TodayPage = () => {
     });
   };
 
+  // Filter routine data based on selected options
+  const filteredRoutine = routineData.filter(
+    (item) =>
+      item.year === selectedYear &&
+      item.faculty === selectedFaculty &&
+      item.section === selectedSection &&
+      item.day === selectedDay
+  );
+
   const handleDayChange = (day) => {
     setSelectedDay(day);
     setShowDayDropdown(false);
@@ -6030,7 +6039,11 @@ const TodayPage = () => {
 
   return (
     <div className="bg-white text-[#41448B] pt-28 min-h-screen flex flex-col items-center">
-      <h1 className="text-2xl font-bold text-center mb-4">Today's Routine</h1>
+      <h1 className="text-2xl font-bold text-center mb-4">
+        {filteredRoutine.length > 0
+          ? `${selectedDay}'s Routine`
+          : "No Routine Found"}
+      </h1>
 
       {/* Year, Faculty, Section dropdowns */}
       <div className="flex justify-center space-x-4 mb-8">
