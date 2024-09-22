@@ -2577,7 +2577,7 @@ const routineData = [
     faculty: "Computing",
     section: "C12",
     day: "Fri",
-    time: "01:30 PM - 03:00 PM",
+    time: "07:00 AM - 08:30 PM",
     type: "Lab",
     module: "Databases",
     lecturer: "Ms. Shresha Rajbhandari",
