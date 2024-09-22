@@ -5980,8 +5980,8 @@ const TodayPage = () => {
     time: true,
     block: true,
     room: true,
-    classType: false,
-    moduleTitle: false,
+    classType: true,
+    moduleTitle: true,
     lecturer: false,
   });
 
