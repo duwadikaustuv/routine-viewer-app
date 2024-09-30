@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarDay } from "@fortawesome/free-solid-svg-icons"; // Import calendar-day icon
+import { faCalendarDays } from "@fortawesome/free-regular-svg-icons"; // Calendar-days icon
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"; // Import LinkedIn icon
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -47,10 +51,21 @@ const Navbar = () => {
           >
             {item.external ? (
               <a href={item.link} target="_blank" rel="noopener noreferrer">
+                {item.id === 3 && (
+                  <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+                )}
                 {item.text}
               </a>
             ) : (
-              <Link to={item.link}>{item.text}</Link>
+              <Link to={item.link}>
+                {item.id === 1 && (
+                  <FontAwesomeIcon icon={faCalendarDay} className="mr-2" />
+                )}
+                {item.id === 2 && (
+                  <FontAwesomeIcon icon={faCalendarDays} className="mr-2" />
+                )}
+                {item.text}
+              </Link>
             )}
           </li>
         ))}
@@ -79,10 +94,21 @@ const Navbar = () => {
           >
             {item.external ? (
               <a href={item.link} target="_blank" rel="noopener noreferrer">
+                {item.id === 3 && (
+                  <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+                )}
                 {item.text}
               </a>
             ) : (
-              <Link to={item.link}>{item.text}</Link>
+              <Link to={item.link}>
+                {item.id === 1 && (
+                  <FontAwesomeIcon icon={faCalendarDay} className="mr-2" />
+                )}
+                {item.id === 2 && (
+                  <FontAwesomeIcon icon={faCalendarDays} className="mr-2" />
+                )}
+                {item.text}
+              </Link>
             )}
           </li>
         ))}
