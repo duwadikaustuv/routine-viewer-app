@@ -5909,7 +5909,7 @@ const FullRoutinePage = () => {
     block: true,
     room: true,
     classType: false,
-    moduleTitle: false,
+    moduleTitle: true,
     lecturer: false,
   });
 
