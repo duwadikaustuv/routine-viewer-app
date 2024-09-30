@@ -2,6 +2,18 @@ import React, { useState, useEffect, useRef } from "react";
 import { AiFillCaretDown } from "react-icons/ai";
 import { FaChevronDown } from "react-icons/fa";
 
+const getFullDayName = (shortDay) => {
+  const dayMap = {
+    Sun: "Sunday",
+    Mon: "Monday",
+    Tue: "Tuesday",
+    Wed: "Wednesday",
+    Thu: "Thursday",
+    Fri: "Friday",
+  };
+  return dayMap[shortDay] || shortDay;
+};
+
 const routineData = [
   {
     year: "Year 2",
@@ -6041,7 +6053,7 @@ const TodayPage = () => {
     <div className="bg-white text-[#41448B] pt-28 min-h-screen flex flex-col items-center">
       <h1 className="text-2xl font-bold text-center mb-4">
         {filteredRoutine.length > 0
-          ? `${selectedDay}'s Routine`
+          ? `${getFullDayName(selectedDay)}'s Routine`
           : "No Routine Found"}
       </h1>
 
