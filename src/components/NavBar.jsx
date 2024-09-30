@@ -40,7 +40,12 @@ const Navbar = () => {
 
   return (
     <div className="bg-[#41448B] flex justify-between items-center h-24 w-full px-4 text-white rounded-b-2xl fixed top-0 left-0 z-50">
-      <h1 className="text-3xl font-bold">Routine Viewer</h1>
+      {/* Logo */}
+      <img
+        src="/routine-viewer-logo.png"
+        alt="Routine Viewer Logo"
+        className="h-24" // Adjust the height of the logo as necessary
+      />
 
       {/* Desktop Navigation */}
       <ul className="hidden md:flex">
@@ -85,7 +90,12 @@ const Navbar = () => {
             : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]"
         }
       >
-        <h1 className="text-3xl font-bold text-white m-4">Routine Viewer</h1>
+        {/* Logo in mobile navigation */}
+        <img
+          src="/routine-viewer-logo.png"
+          alt="Routine Viewer Logo"
+          className="h-24 m-4" // Adjust height and margin as necessary
+        />
 
         {navItems.map((item) => (
           <li
