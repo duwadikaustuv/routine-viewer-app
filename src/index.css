@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Navbar Styles */
+  .nav-desktop-link {
+    @apply flex items-center px-3 py-2 rounded-md text-white/90 hover:text-white hover:bg-white/5 transition-colors text-sm font-medium;
+  }
+
+  .nav-mobile-link {
+    @apply flex items-center px-4 py-3 rounded-lg text-white/90 hover:text-white hover:bg-white/5 transition-colors text-base font-medium;
+  }
+
+  /* Footer Styles */
+  .footer-link {
+    @apply flex items-center text-white/70 hover:text-white transition-colors text-sm;
+  }
+
+  .footer-legal-link {
+    @apply text-white/70 hover:text-white transition-colors text-sm;
+  }
+}
