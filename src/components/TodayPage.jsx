@@ -140,7 +140,7 @@ const TodayPage = () => {
         {/* Controls Container */}
         <div className="bg-white rounded-xl shadow-sm border border-indigo-100 p-6 mb-8">
           <h2 className="text-lg font-semibold text-indigo-900 mb-4">
-            Customize Your Schedule
+            Select your Routine
           </h2>
 
           {/* Filters */}
