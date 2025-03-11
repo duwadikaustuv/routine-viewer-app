@@ -108,7 +108,7 @@ const TodayPage = () => {
   const getDayEmoji = (day) => {
     const emojis = {
       Sunday: "🌞",
-      Monday: "🌈",
+      Monday: "📚",
       Tuesday: "💫",
       Wednesday: "🌙",
       Thursday: "⭐",
