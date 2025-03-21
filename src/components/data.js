@@ -105,7 +105,7 @@ export const routineData = [
     module: "Professional and Ethical Issues",
     lecturer: "Ms. Shreesha Rajbhandari",
     block: "Nepal",
-    room: "TR04 - Lumbini",
+    room: "TR03 - Pokhara",
   },
   {
     year: "Year 2",
