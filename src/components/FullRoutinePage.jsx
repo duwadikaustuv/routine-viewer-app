@@ -9,7 +9,7 @@ import {
   FiUser,
   FiGrid,
 } from "react-icons/fi";
-import { routineData, getSections } from "./data.js";
+import { routineData, getSections, getBatches } from "./data.js";
 
 const FullRoutinePage = () => {
   const [showOptions, setShowOptions] = useState(false);
@@ -21,6 +21,7 @@ const FullRoutinePage = () => {
           year: "Year 2",
           faculty: "Computing",
           section: "C12",
+          batch: "Autumn",
         };
   });
 
@@ -71,6 +72,13 @@ const FullRoutinePage = () => {
     return types[type] || "bg-gray-100 text-gray-800 border-gray-200";
   };
 
+  const sections =
+    selections.year === "Year 1"
+      ? getSections(selections.year, selections.faculty, selections.batch)
+      : getSections(selections.year, selections.faculty);
+
+  const sectionsArray = Array.isArray(sections) ? sections : [];
+
   return (
     <div className="bg-gradient-to-b from-indigo-50 to-white min-h-screen pt-20 pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -85,6 +93,7 @@ const FullRoutinePage = () => {
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium">
             <span className="mr-1">📚</span> {selections.year} •{" "}
             {selections.faculty} • Section {selections.section}
+            {selections.year === "Year 1" && ` • ${selections.batch} Batch`}
           </div>
         </div>
 
@@ -139,7 +148,33 @@ const FullRoutinePage = () => {
               </select>
             </div>
 
-            <div>
+            {selections.year === "Year 1" && (
+              <div>
+                <label className="block text-sm font-medium text-indigo-700 mb-1">
+                  Batch
+                </label>
+                <select
+                  value={selections.batch}
+                  onChange={(e) =>
+                    setSelections((prev) => ({
+                      ...prev,
+                      batch: e.target.value,
+                    }))
+                  }
+                  className="w-full rounded-lg border border-indigo-200 px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                >
+                  {getBatches().map((batch) => (
+                    <option key={batch} value={batch}>
+                      {batch}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+
+            <div
+              className={selections.year === "Year 1" ? "sm:col-span-3" : ""}
+            >
               <label className="block text-sm font-medium text-indigo-700 mb-1">
                 Section
               </label>
@@ -153,13 +188,11 @@ const FullRoutinePage = () => {
                 }
                 className="w-full rounded-lg border border-indigo-200 px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
               >
-                {getSections(selections.year, selections.faculty).map(
-                  (section) => (
-                    <option key={section} value={section}>
-                      {section}
-                    </option>
-                  )
-                )}
+                {sections.map((section) => (
+                  <option key={section} value={section}>
+                    {section}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
